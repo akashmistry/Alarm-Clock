@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="main-container">
+      <div class="container">
+        <div class="current-time">
+          <span id="time"></span>
+        </div>
+        <div class="inputs">
+          <input
+            type="number"
+            id="hour-input"
+            placeholder="00"
+            min="0"
+            max="11"
+          />
+          <input
+            type="number"
+            id="minute-input"
+            placeholder="00"
+            min="0"
+            max="59"
+          />
+          <input
+            type="number"
+            id="second-input"
+            placeholder="00"
+            min="0"
+            max="59"
+          />
+
+          <select id="session">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <div class="add-button">
+          <button id="set">Add Alarm</button>
+        </div>
+        <div id="lists">
+          <ul id="active-alarms"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

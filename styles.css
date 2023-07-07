@@ -1,0 +1,90 @@
+body {
+  background-color: #001c30;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 350px;
+  height: 500px;
+  background-color: #176b87;
+  margin-top: 20%;
+  border-radius: 20px;
+  padding: 10px;
+  /* border style */
+  border-color: #64ccc5;
+  border-width: 5px;
+  border-style: solid;
+}
+
+#time {
+  color: #dafffb;
+  font-family: monospace;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.inputs input {
+  font-size: 20px;
+  border-radius: 5px;
+  /* background-color: #dafffb; */
+  border: 1px solid #001c30;
+  padding: 10px;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+}
+.add-button button {
+  background-color: #001c30;
+  color: #dafffb;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#lists {
+  height: 340px;
+  overflow: scroll;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #001c30;
+  color: #64ccc5;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: monospace;
+  margin-top: 10px;
+}
+ul li:hover {
+  /* background: #64ccc5;
+  color: #001c30;
+  border-radius: 10px; */
+  padding-top: 9.5px;
+  font-size: 22px;
+}
