@@ -22,10 +22,11 @@ body {
 #time {
   color: #dafffb;
   font-family: monospace;
-  font-size: 30px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .inputs {
@@ -35,12 +36,14 @@ body {
   gap: 10px;
 }
 
-.inputs input {
-  font-size: 20px;
+.inputs select {
+  padding: 5px 5px;
+  text-align: center;
   border-radius: 5px;
-  /* background-color: #dafffb; */
-  border: 1px solid #001c30;
-  padding: 10px;
+  border: none;
+  font-weight: bold;
+  color: #001c30;
+  background-color: #dafffb;
 }
 
 .add-button {

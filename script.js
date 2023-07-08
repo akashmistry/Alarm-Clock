@@ -7,6 +7,8 @@ const secondInput = document.getElementById("second-input");
 const activeAlarms = document.querySelector("#active-alarms");
 const setAlarm = document.getElementById("set");
 const session = document.getElementById("session");
+const selectMenu = document.querySelectorAll("select");
+
 let alarmSound = new Audio("./alarm.mp3");
 
 // for handling single digit time
@@ -87,14 +89,14 @@ function deleteAlarm(alarmId) {
 }
 function setAlarmHandler(e) {
   let time =
-    handleTime(hourInput.value) +
+    hourInput.value +
     ":" +
-    handleTime(minuteInput.value) +
+    minuteInput.value +
     ":" +
-    handleTime(secondInput.value) +
+    secondInput.value +
     " " +
     session.value;
-  if (time === "0:0:0 AM") {
+  if (time === "00:00:00 AM") {
     alert("Enter a valid time");
     return;
   }
@@ -128,6 +130,28 @@ function handleClickListner(e) {
     toggleAlarm(alarmId);
     return;
   }
+}
+
+for (let i = 12; i > 0; i--) {
+  i = i < 10 ? "0" + i : i;
+  let option = `<option value="${i}">${i}</option>`;
+  selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+
+for (let i = 59; i >= 0; i--) {
+  i = i < 10 ? "0" + i : i;
+  let option = `<option value="${i}">${i}</option>`;
+  selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+for (let i = 59; i >= 0; i--) {
+  i = i < 10 ? "0" + i : i;
+  let option = `<option value="${i}">${i}</option>`;
+  selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+for (let i = 2; i > 0; i--) {
+  let ampm = i == 1 ? "AM" : "PM";
+  let option = `<option value="${ampm}">${ampm}</option>`;
+  selectMenu[3].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
 function initializeApp() {
