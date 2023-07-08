@@ -94,6 +94,10 @@ function setAlarmHandler(e) {
     handleTime(secondInput.value) +
     " " +
     session.value;
+  if (time === "0:0:0 AM") {
+    alert("Enter a valid time");
+    return;
+  }
   const alarm = {
     time: time,
     id: Date.now(),
